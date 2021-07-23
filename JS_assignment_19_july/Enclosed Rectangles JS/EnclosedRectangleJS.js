@@ -1,16 +1,16 @@
 let RectangleA = {
   top: "20px",
   right: "200px",
-  height: "40px",
-  width: "60px",
+  height: "400px",
+  width: "600px",
   children: [],
 };
 
 let RectangleB = {
   top: "30px",
   right: "300px",
-  height: "20px",
-  width: "30px",
+  height: "200px",
+  width: "300px",
   children: [],
 };
 
@@ -94,5 +94,5 @@ function drawRect(obj, color) {
   ctx.strokeRect(obj.left, obj.top, obj.width, obj.height);
 }
 
-drawRect(rb, "#80ffdb");
+drawRect(rb, "green");
 drawRect(ra, "red");
