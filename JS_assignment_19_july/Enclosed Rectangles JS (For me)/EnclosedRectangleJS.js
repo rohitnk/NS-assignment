@@ -82,17 +82,17 @@ function throwResult([oa, ob]) {
 }
 
 console.log(throwResult(main()));
-// console.log(ra, rb);
+console.log(ra, rb);
 
-// function drawRect(obj, color) {
-//   const canvas = document.getElementById("canvas");
-//   canvas.style.width = "900";
-//   canvas.style.height = "900";
-//   const ctx = canvas.getContext("2d");
-//   ctx.strokeStyle = color;
-//   ctx.lineWidth = 2;
-//   ctx.strokeRect(obj.left, obj.top, obj.width, obj.height);
-// }
+function drawRect(obj, color) {
+  const canvas = document.getElementById("canvas");
+  canvas.style.width = "900";
+  canvas.style.height = "900";
+  const ctx = canvas.getContext("2d");
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.strokeRect(obj.left, obj.top, obj.width, obj.height);
+}
 
-// drawRect(rb, "green");
-// drawRect(ra, "red");
+drawRect(rb, "green");
+drawRect(ra, "red");

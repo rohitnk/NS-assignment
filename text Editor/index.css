@@ -1,0 +1,16 @@
+#main {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
+#heading {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  background: gray;
+  justify-content: space-between;
+}
+#textarea {
+  height: 300px;
+}
