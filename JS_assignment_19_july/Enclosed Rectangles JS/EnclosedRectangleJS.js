@@ -82,6 +82,7 @@ function throwResult([oa, ob]) {
 }
 
 console.log(throwResult(main()));
+
 // console.log(ra, rb);
 
 // function drawRect(obj, color) {
