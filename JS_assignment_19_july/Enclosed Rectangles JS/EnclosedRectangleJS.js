@@ -2,15 +2,15 @@ let RectangleA = {
   top: "20px",
   right: "200px",
   height: "400px",
-  width: "600px",
+  width: "610px",
   children: [],
 };
 
 let RectangleB = {
-  top: "30px",
-  right: "300px",
-  height: "200px",
-  width: "300px",
+  top: "20px",
+  right: "200px",
+  height: "400px",
+  width: "600px",
   children: [],
 };
 
@@ -26,22 +26,24 @@ let rb = {};
 copydata(RectangleA, ra);
 copydata(RectangleB, rb);
 
+console.log(ra, rb);
+
 function equalDataCration(r) {
   if (r.top && r.left && r.height && r.width) {
-    r.bottom = 1000 - (r.top + r.height);
-    r.right = 1000 - (r.width + r.left);
+    r.bottom = 10000 - (r.top + r.height);
+    r.right = 10000 - (r.width + r.left);
   } else if (r.top && r.left && r.bottom && r.right) {
-    r.height = 1000 - (r.top + r.bottom);
-    r.width = 1000 - (r.left - r.right);
+    r.height = 10000 - (r.top + r.bottom);
+    r.width = 10000 - (r.left - r.right);
   } else if (r.bottom && r.right && r.height && r.width) {
-    r.top = 1000 - (r.bottom + r.height);
-    r.left = 1000 - (r.width + r.right);
+    r.top = 10000 - (r.bottom + r.height);
+    r.left = 10000 - (r.width + r.right);
   } else if (r.top && r.right && r.height && r.width) {
-    r.left = 1000 - (r.width + r.right);
-    r.bottom = 1000 - (r.top + r.height);
+    r.left = 10000 - (r.width + r.right);
+    r.bottom = 10000 - (r.top + r.height);
   } else if (r.bottom && r.left && r.height && r.width) {
-    r.top = 1000 - (r.bottom + r.height);
-    r.right = 1000 - (r.width + r.left);
+    r.top = 10000 - (r.bottom + r.height);
+    r.right = 10000 - (r.width + r.left);
   }
 }
 
@@ -81,19 +83,19 @@ function throwResult([oa, ob]) {
   return oa;
 }
 
-console.log(throwResult(main()));
+// console.log(throwResult(main()));
 
 // console.log(ra, rb);
 
-// function drawRect(obj, color) {
-//   const canvas = document.getElementById("canvas");
-//   canvas.style.width = "900";
-//   canvas.style.height = "900";
-//   const ctx = canvas.getContext("2d");
-//   ctx.strokeStyle = color;
-//   ctx.lineWidth = 2;
-//   ctx.strokeRect(obj.left, obj.top, obj.width, obj.height);
-// }
+function drawRect(obj, color) {
+  const canvas = document.getElementById("canvas");
+  canvas.style.width = "900";
+  canvas.style.height = "900";
+  const ctx = canvas.getContext("2d");
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.strokeRect(obj.left, obj.top, obj.width, obj.height);
+}
 
-// drawRect(rb, "green");
-// drawRect(ra, "red");
+drawRect(rb, "green");
+drawRect(ra, "red");
